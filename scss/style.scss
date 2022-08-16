@@ -1,0 +1,582 @@
+@import "base/variables";
+@import "base/listas";
+@import "base/mixin";
+@import "base/mediaquery";
+
+
+//nesting  
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Merienda', cursive;
+    color: whitesmoke;
+}
+
+/*GRID LAYOUT*/
+/*INDEX*/
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    row-gap: 10px;
+
+    /*HEADER*/
+    .header {
+        grid-area: header;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(../img/brazilian-chimarrao.webp);
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        color:nth($list:$colores, $n:5 );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .navbar {
+            display: flex;
+            background-color:nth($list:$colores, $n:2 );
+            justify-content: end;
+            color:nth($list:$colores, $n:5 );
+        }
+
+        .navbar-brand {
+            color:nth($list:$colores, $n:5 );
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+            color:nth($list:$colores, $n:5 );
+        }
+
+    }
+
+    /*MAIN*/
+    .main {
+        grid-area: main;
+
+        /*grid section index*/
+        .section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 20% 40% 45%;
+            grid-template-areas: "contenedorTitulo contenedorTitulo contenedorTitulo"
+                "contenedorImagenUno contenedorImagenDos contenedorImagenTres"
+                "divMate divMate divMate";
+                color:nth($list:$colores, $n:5 );
+            background-color:nth($list:$colores, $n:2 );
+        }
+
+        .contenedorTitulo {
+            grid-area: contenedorTitulo;
+            display: flex;
+            text-align: center;
+            margin-top: 5rem;
+            box-shadow: 1px 1px 1px;
+        }
+
+        .contenedorTitulo h2 {
+            box-shadow: 1px 1px 1px;
+            text-align: center;
+            padding: 25px;
+            font-size: 3.8rem;
+        }
+
+        .contenedorTitulo p {
+            text-align: center;
+            padding: 50px;
+           font-size: 2rem;
+            padding: 90px;
+            display: flex;
+            align-self: center;
+        }
+
+        /*CONTENEDOR DE IMAGENES*/
+
+        .contenedorImagenUno {
+            grid-area: contenedorImagenUno;
+            text-align: center;
+            align-self: end;
+            box-shadow: 1px 1px 1px;
+        }
+
+        .contenedorImagenDos {
+            grid-area: contenedorImagenDos;
+            text-align: center;
+            align-self: end;
+            box-shadow: 1px 1px 1px;
+        }
+
+        .contenedorImagenTres {
+            grid-area: contenedorImagenTres;
+            text-align: center;
+            align-self: end;
+            box-shadow: 1px 1px 1px;
+        }
+
+        .divMate {
+            grid-area: divMate;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            font-size: 1.3rem;
+            color: black;
+            font-weight: bolder;
+            margin-top: 8px;
+            justify-content: space-evenly;
+            height: 40rem;
+            background-image: url(../img/bombillasDos.jpeg);
+            background-position: center;
+
+            h4 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                padding: 90px;
+            }
+        }
+    }
+
+    .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        background-color:nth($list:$colores, $n:2 );
+        box-shadow: 1px 1px 1px black;
+        margin-top: 136px;
+        height: 50%;
+
+        /*iconos footer*/
+        .iconoFace {
+            margin-top: 20px;
+        }
+
+        .iconoInsta {
+            margin-top: 20px;
+        }
+
+        .iconoWhats {
+            margin-top: 20px;
+        }
+
+        .tituloFooter {
+            margin-top: 40px;
+            color:nth($list:$colores, $n:5 );
+        }
+    }
+}
+
+/*GALERIA*/
+/*GRID GALERIA*/
+.bodyG {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "mainG mainG mainG"
+        "footer footer footer";
+    row-gap: 10px;
+
+    /*HEADER*/
+    .header {
+        grid-area: header;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(../img/brazilian-chimarrao.webp);
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        color:nth($list:$colores, $n:5 );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .navbar {
+            display: flex;
+            background-color:nth($list:$colores, $n:2 );
+            justify-content: end;
+            color: white;
+        }
+
+        .navbar-brand {
+            color:nth($list:$colores, $n:5 );
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+            color:nth($list:$colores, $n:5 );
+        }
+
+    }
+
+    .mainG {
+        grid-area: mainG;
+
+        /* GRID SECTION*/
+        .sectionG {
+            display: grid;
+            grid-template-areas: "mainTitutloGaleria mainTitutloGaleria mainTitutloGaleria"
+                "carrusel carrusel carrusel"
+                "mainParrafoGaleria mainParrafoGaleria mainParrafoGaleria";
+            background-color: rgb(164, 196, 100);
+
+            /*TITULO MAIN*/
+            .mainTitutloGaleria {
+                grid-area: mainTitutloGaleria;
+                display: flex;
+                justify-content: center;
+                color: white;
+                font-size: 4rem;
+                margin-top: 6rem;
+                box-shadow: 6px 6px 6px;
+            }
+
+            /*CARRUSEL*/
+            .carrusel {
+                grid-area: carrusel;
+                margin-top: 10rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mainParrafoGaleria {
+                grid-area: mainParrafoGaleria;
+                margin-top: 5rem;
+                text-align: center;
+                margin-bottom: 8rem;
+                color:nth($list:$colores, $n:5 );
+                font-size: 1.4rem;
+                box-shadow: 6px 6px 6px;
+                padding: 100px;
+            }
+
+        }
+    }
+
+    /*FOOTER*/
+    .footerG {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        background-color:nth($list:$colores, $n:2 );
+        box-shadow: 1px 1px 1px black;
+        margin-top: 1px;
+        height: 130%;
+    }
+}
+
+/*NOSOTROS*/
+/*GRID NOSOTROS*/
+.bodyN {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "mainN mainN mainN"
+        "footer footer footer";
+    row-gap: 10px;
+
+    /*HEADER*/
+    .header {
+        grid-area: header;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(../img/brazilian-chimarrao.webp);
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        color:nth($list:$colores, $n:5 );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .navbar {
+            display: flex;
+            background-color:nth($list:$colores, $n:2 );
+            justify-content: end;
+            color: white;
+        }
+
+        .navbar-brand {
+            color:nth($list:$colores, $n:5 );
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+            color:nth($list:$colores, $n:5 );
+        }
+
+    }
+
+    .mainN {
+        grid-area: mainN;
+
+        /*GRID SECTION*/
+        .sectionN {
+            display: grid;
+            grid-template-areas: "TitutloMainN TitutloMainN TitutloMainN"
+                "parrafoMainN parrafoMainN parrafoMainN"
+                "contenedorCardUno contenedorCardDos contenedorCardTres";
+                background-color:nth($list:$colores, $n:2 );
+
+            /*TITULO MAIN*/
+            .TitutloMainN {
+                grid-area: TitutloMainN;
+                text-align: center;
+                color: white;
+                margin-top: 7rem;
+                font-size: 3rem;
+                box-shadow: 6px 6px 6px;
+            }
+
+            /*PARRAFO MAIN*/
+            .parrafoMainN {
+                grid-area: parrafoMainN;
+                text-align: center;
+                color:nth($list:$colores, $n:5 );
+                margin-top: 10rem;
+                font-size: 1.7rem;
+                display: flex;
+                box-shadow: 6px 6px 6px;
+                padding: 75px;
+            }
+
+            /*CARD NOSOTROS*/
+            .contenedorCardUno {
+                grid-area: contenedorCardUno;
+                margin: 20px;
+                text-align: center;
+                background-color:$color-card;
+                border-radius: 20px;
+                transition: all 400ms ease;
+                margin-top: 15rem;
+                margin-bottom: 7rem;
+
+                .card {
+                    background-color:$color-card;
+                    color:nth($list:$colores, $n:5 );
+                    overflow: hidden;
+                    border-radius: 20px;
+                    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+                    transition: all 400ms ease;
+                    height: 100%;
+
+                    :hover {
+                        box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+                        transform: translateY(-3%);
+                    }
+                }
+
+
+            }
+
+            .contenedorCardDos {
+                grid-area: contenedorCardDos;
+                margin: 20px;
+                text-align: center;
+                border-radius: 20px;
+                transition: all 400ms ease;
+                margin-top: 15rem;
+                background-color:$color-card;
+                margin-bottom: 7rem;
+
+                .card {
+                    background-color:$color-card;
+                    color:nth($list:$colores, $n:5 );
+                    overflow: hidden;
+                    border-radius: 20px;
+                    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+                    transition: all 400ms ease;
+
+                    :hover {
+                        box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+                        transform: translateY(-3%);
+                    }
+
+                }
+            }
+
+            .contenedorCardTres {
+                grid-area: contenedorCardTres;
+                margin: 20px;
+                text-align: center;
+                border-radius: 20px;
+                transition: all 400ms ease;
+                margin-top: 15rem;
+                background-color:$color-card;
+                margin-bottom: 7rem;
+
+                .card {
+                    background-color:$color-card;
+                    color:nth($list:$colores, $n:5 );
+                    overflow: hidden;
+                    border-radius: 20px;
+                    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+                    transition: all 400ms ease;
+
+                    :hover {
+                        box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+                        transform: translateY(-3%);
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+    /*Footer Nosotros*/
+    .footerNos {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(164, 196, 100);
+        box-shadow: 1px 1px 1px black;
+        margin-top: 1px;
+        height: 130%;
+    }
+}
+
+/*CONTACTO*/
+/*GRID SECTION CONTACTO*/
+.sectionContacto {
+    display: grid;
+    grid-template-areas: "dContacto "
+        "tContacto ";
+    background-color: rgb(164, 196, 100);
+    height: 125%;
+
+    .dContacto {
+        grid-area: dContacto;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        .tituloContacto {
+            font-size: 3rem;
+            margin-top: 3.4rem;
+        }
+
+        .parrafoContacto {
+            margin-top: 3rem;
+            font-size: 2rem;
+        }
+    }
+
+    .tContacto {
+        grid-area: tContacto;
+        text-align: center;
+
+        .input {
+            color: black;
+        }
+    }
+}
+
+/*GRID MATES TERMOS BOMBILLAS*/
+/*MATES TERMOS BOMBILLAS*/
+.bodyMates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "mainMates mainMates mainMates"
+        "footerM footerM footerM";
+    row-gap: 10px;
+
+    .header {
+        grid-area: header;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(../img/brazilian-chimarrao.webp);
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        color:nth($list:$colores, $n:5 );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mainMates {
+        background-color:nth($list:$colores, $n:2 );
+        grid-area: mainMates;
+
+        .mainMatesSection {
+            display: grid;
+            grid-template-areas: "mainMatesTitulo mainMatesTitulo mainMatesTitulo"
+                " contenedorCardMatesUno contenedorCardMatesDos contenedorCardMatesTres"
+                "contenedorCardMatesCuatro contenedorCardMatesCinco contenedorCardMatesSeis";
+                background-color:nth($list:$colores, $n:2 );
+
+            .mainMatesTitulo {
+                grid-area: mainMatesTitulo;
+                color:nth($list:$colores, $n:5 );
+                margin-top: 4rem;
+                box-shadow: 6px 6px 6px;
+                text-align: center;
+            }
+
+            /*CARD MATES TERMOS BOMBILLAS*/
+            .contenedorCardMatesUno {
+                grid-area: contenedorCardMatesUno;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+                @include card-mates;
+            }
+
+            div.card.text {
+                background-color: olivedrab;
+                color: whitesmoke;
+            }
+
+            .contenedorCardMatesDos {
+                grid-area: contenedorCardMatesDos;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+                @include card-mates;
+               
+            }
+
+            .contenedorCardMatesTres {
+                grid-area: contenedorCardMatesTres;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+                @include card-mates;
+            }
+
+            .contenedorCardMatesCuatro {
+                grid-area: contenedorCardMatesCuatro;
+                flex-wrap: wrap;
+                @include card-mates;
+            }
+
+            .contenedorCardMatesCinco {
+                grid-area: contenedorCardMatesCinco;
+                flex-wrap: wrap;
+                @include card-mates;
+            }
+
+            .contenedorCardMatesSeis {
+                grid-area: contenedorCardMatesSeis;
+                flex-wrap: wrap;
+                @include card-mates;
+            }
+        }
+    }
+
+    /*FOOTER*/
+    .footerM {
+        grid-area: footerM;
+        justify-content: space-between;
+        background-color:nth($list:$colores, $n:2 );
+        box-shadow: 1px 1px 1px black;
+        display: grid;
+        grid-template-areas: "tituloFooter iconoFace iconoInsta iconoWhats";
+        grid-template-columns: 25% 25% 25% 25%;
+        
+    }
+}

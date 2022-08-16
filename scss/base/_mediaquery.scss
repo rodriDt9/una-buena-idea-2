@@ -1,0 +1,368 @@
+/*INDEX*/
+/*media queris INDEX*/
+@media screen and (max-width:767px) {
+    .section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 20%;
+        grid-template-areas: "contenedorTitulo contenedorTitulo "
+            "contenedorImagenUno contenedorImagenDos "
+            "contenedorImagenTres contenedorImagenTres"
+            "divMate divMate ";
+        color: whitesmoke;
+        background-color: rgb(164, 196, 100);
+        .contenedorTitulo {
+            grid-area: contenedorTitulo;
+        }
+    
+        .concontenedorImagenUno {
+            grid-area: contenedorImagenUno;
+        }
+    
+        .contenedorImagenDos {
+            grid-area: contenedorImagenDos;
+        }
+    
+        .contenedorImagenTres {
+            grid-area: contenedorImagenTres;
+        }
+    
+        .divMate {
+            grid-area: divMate;
+        }
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width:665px) {
+    .section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 8% 25% 25%;
+        grid-template-areas: "contenedorTitulo contenedorTitulo "
+            "contenedorImagenUno contenedorImagenDos "
+            "contenedorImagenTres contenedorImagenTres"
+            "divMate divMate ";
+        color: whitesmoke;
+        background-color: rgb(164, 196, 100);
+        .contenedorTitulo {
+            width: 80%;
+        }
+    
+        .contenedorTitulo p {
+            display: none;
+        }
+        .contenedorTitulo {
+            grid-area: contenedorTitulo;
+        }
+    
+        .contenedorTitulo h2 {
+            font-size: 30px;
+            display: flex;
+            align-self: flex-end;
+        }
+    
+        .concontenedorImagenUno {
+            grid-area: contenedorImagenUno;
+        }
+    
+        .contenedorImagenDos {
+            grid-area: contenedorImagenDos;
+        }
+    
+        .contenedorImagenTres {
+            grid-area: contenedorImagenTres;
+        }
+    
+        .divMate {
+            grid-area: divMate;
+        }
+    }
+}
+
+@media screen and (max-width:587px) {
+    .divMate h4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:512px) {
+    .section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 20% 20% 20%;
+        grid-template-areas: "contenedorTitulo "
+            "contenedorImagenUno "
+            "contenedorImagenDos"
+            "contenedorImagenTres"
+            "divMate ";
+        color: whitesmoke;
+        background-color: rgb(164, 196, 100);
+        .contenedorTitulo {
+            grid-area: contenedorTitulo;
+        }
+    
+        .concontenedorImagenUno {
+            grid-area: contenedorImagenUno;
+        }
+    
+        .contenedorImagenDos {
+            grid-area: contenedorImagenDos;
+        }
+    
+        .contenedorImagenTres {
+            grid-area: contenedorImagenTres;
+        }
+    
+        .divMate {
+            grid-area: divMate;
+            width: 100%;
+            justify-items: inherit;
+            justify-self: center;
+        }
+    
+        .divMate p {
+            font-size: 1.1rem;
+        }
+    } 
+}
+
+@media screen and (max-width: 360px) {
+    .divMate p {
+        font-size: 1.1rem;
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .divMate p {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .footer {
+        margin-bottom: 1px;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+/*GALERIA*/
+/*media queris GALERIA*/
+@media screen and (max-width: 537px) {
+    .mainTitutloGaleria {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .carrusel {
+        width: 90%;
+    }
+
+    #carouselExampleControls:hover {
+        display: none;
+    }
+}
+@media screen and (max-width: 499px) {
+    .carrusel {
+        width: 80%;
+    }
+
+    #carouselExampleControls:hover {
+        display: none;
+    }
+}
+@media screen and (max-width: 461px) {
+    .carrusel {
+        width: 60%;
+    }
+
+    #carouselExampleControls:hover {
+        display: none;
+    }
+}
+@media screen and (max-width:409px) {
+    .carrusel {
+        width: 45%;
+    }
+
+    #carouselExampleControls:hover {
+        display: none;
+    }
+}
+@media screen and (max-width:381px) {
+    .carrusel {
+        width: 45%;
+    }
+
+    #carouselExampleControls:hover {
+        display: none;
+    }
+
+    .mainTitutloGaleria {
+        display: flex;
+        justify-self: baseline;
+    }
+}
+@media screen and (max-width:370px) {
+    .carrusel {
+        width: 25px;
+    }
+
+    #carouselExampleControls:hover {
+        display: none;
+    }
+
+    .mainTitutloGaleria {
+        display: flex;
+        justify-self: baseline;
+    }
+}
+
+/*NOSOTROS*/
+/*media queris NOSOTROS*/
+
+@media screen and (max-width:503px) {
+    .sectionN {
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas: "TitutloMainN TitutloMainN "
+            "parrafoMainN parrafoMainN "
+            "contenedorCardUno contenedorCardDos "
+            "contenedorCardTres contenedorCardTres";
+        background-color: rgb(164, 196, 100);
+        .TitutloMainN {
+            grid-area: TitutloMainN;
+        }
+    
+        .parrafoMainN {
+            grid-area: parrafoMainN;
+        }
+    
+        .contenedorCardUno {
+            grid-area: contenedorCardUno;
+            height: 76%;
+        }
+    
+        .contenedorCardDos {
+            grid-area: contenedorCardDos;
+        }
+    
+        .contenedorCardTres {
+            grid-area: contenedorCardTres;
+        }
+
+    }
+    }
+
+    @media screen and (max-width:412px) {
+        .sectionN {
+            display: grid;
+            grid-template-rows: 0.3fr 1fr 1fr 1fr;
+            grid-template-areas: "TitutloMainN TitutloMainN "
+                "parrafoMainN parrafoMainN "
+                "contenedorCardUno contenedorCardDos "
+                "contenedorCardTres contenedorCardTres";
+            background-color: rgb(164, 196, 100);
+            .TitutloMainN {
+                grid-area: TitutloMainN;
+            }
+        
+            .parrafoMainN {
+                grid-area: parrafoMainN;
+            }
+        
+            .contenedorCardUno {
+                grid-area: contenedorCardUno;
+                height: 76%;
+            }
+        
+            .contenedorCardDos {
+                grid-area: contenedorCardDos;
+            }
+        
+            .contenedorCardTres {
+                grid-area: contenedorCardTres;
+                height: 35%;
+            }
+        }
+    }
+
+    @media screen and (max-width:471px) {
+        .parrafoMainN {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media screen and (max-width:332px) {
+        .sectionN {
+            display: grid;
+            grid-template-rows: 17% 17% 19% 17%;
+            grid-template-areas: "TitutloMainN  "
+                "parrafoMainN  "
+                "contenedorCardUno"
+                "contenedorCardDos"
+                "contenedorCardTres";
+            background-color: rgb(164, 196, 100);
+            .TitutloMainN {
+                grid-area: TitutloMainN;
+            }
+        
+            .parrafoMainN {
+                grid-area: parrafoMainN;
+                margin-top: 1px;
+            }
+        
+            .contenedorCardUno {
+                grid-area: contenedorCardUno;
+                height: 76%;
+            }
+        
+            .contenedorCardDos {
+                grid-area: contenedorCardDos;
+            }
+        
+            .contenedorCardTres {
+                grid-area: contenedorCardTres;
+                height: 35%;
+            }
+        }
+    }
+
+
+    /*NOSOTROS*/
+/*media queris nosotros*/
+@media screen and (max-width:1000px) {
+    .mainMatesSection {
+        display: grid;
+        grid-template-areas: "mainMatesTitulo mainMatesTitulo"
+            " contenedorCardMatesUno contenedorCardMatesDos"
+            "contenedorCardMatesTres contenedorCardMatesCuatro"
+            "contenedorCardMatesCinco contenedorCardMatesSeis";
+    }
+}
+
+@media screen and (max-width:661px) {
+    .mainMatesSection {
+        display: grid;
+        grid-template-areas: "mainMatesTitulo "
+            " contenedorCardMatesUno "
+            "contenedorCardMatesDos"
+            "contenedorCardMatesTres"
+            "contenedorCardMatesCuatro"
+            "contenedorCardMatesCinco"
+            "contenedorCardMatesSeis";
+    }
+}
+
+@media screen and (max-width:323px) {
+    div.card.text {
+        background-color: olivedrab;
+        color: whitesmoke;
+        width: 85%;
+    }
+}
