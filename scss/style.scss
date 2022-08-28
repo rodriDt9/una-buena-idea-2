@@ -78,6 +78,8 @@
             text-align: center;
             margin-top: 5rem;
             box-shadow: 1px 1px 1px;
+            
+            
         }
 
         .contenedorTitulo h2 {
@@ -90,10 +92,15 @@
         .contenedorTitulo p {
             text-align: center;
             padding: 50px;
-           font-size: 2rem;
+           font-size: 1.8rem;
             padding: 90px;
             display: flex;
             align-self: center;
+        }
+        .parrafContenedor{
+            font-size: 1.1rem;
+            display: flex;
+          align-self: center;
         }
 
         /*CONTENEDOR DE IMAGENES*/
@@ -103,6 +110,8 @@
             text-align: center;
             align-self: end;
             box-shadow: 1px 1px 1px;
+            display: flex;
+            align-self: center;
         }
 
         .contenedorImagenDos {
@@ -110,6 +119,8 @@
             text-align: center;
             align-self: end;
             box-shadow: 1px 1px 1px;
+            display: flex;
+            align-self: center;
         }
 
         .contenedorImagenTres {
@@ -117,6 +128,8 @@
             text-align: center;
             align-self: end;
             box-shadow: 1px 1px 1px;
+            display: flex;
+            align-self: center;
         }
 
         .divMate {
@@ -136,7 +149,6 @@
             h4 {
                 font-size: 2.5rem;
             }
-
             p {
                 padding: 90px;
             }
@@ -498,6 +510,20 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .navbar {
+            display: flex;
+            background-color:nth($list:$colores, $n:2 );
+            justify-content: end;
+            color: white;
+        }
+
+        .navbar-brand {
+            color:nth($list:$colores, $n:5 );
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+            color:nth($list:$colores, $n:5 );
+        }
     }
 
     .mainMates {
@@ -526,6 +552,7 @@
                 flex-wrap: wrap;
                 margin-top: 5rem;
                 @include card-mates;
+                justify-self: center;
             }
 
             div.card.text {
@@ -535,15 +562,20 @@
 
             .contenedorCardMatesDos {
                 grid-area: contenedorCardMatesDos;
+                display: flex;
                 flex-wrap: wrap;
                 margin-top: 5rem;
                 @include card-mates;
+                justify-self: center;
+                
                
             }
 
             .contenedorCardMatesTres {
                 grid-area: contenedorCardMatesTres;
                 flex-wrap: wrap;
+                display: flex;
+                justify-self: center;
                 margin-top: 5rem;
                 @include card-mates;
             }
@@ -552,18 +584,24 @@
                 grid-area: contenedorCardMatesCuatro;
                 flex-wrap: wrap;
                 @include card-mates;
+                display: flex;
+                justify-self: center;
             }
 
             .contenedorCardMatesCinco {
                 grid-area: contenedorCardMatesCinco;
                 flex-wrap: wrap;
                 @include card-mates;
+                display: flex;
+                justify-self: center;
             }
 
             .contenedorCardMatesSeis {
                 grid-area: contenedorCardMatesSeis;
                 flex-wrap: wrap;
                 @include card-mates;
+                display: flex;
+                justify-self: center;
             }
         }
     }

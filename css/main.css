@@ -1,6 +1,6 @@
 /*INDEX*/
 /*media queris INDEX*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1056px) {
   .section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -283,25 +283,35 @@
     .body .main .contenedorTitulo p {
       text-align: center;
       padding: 50px;
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding: 90px;
+      display: flex;
+      align-self: center; }
+    .body .main .parrafContenedor {
+      font-size: 1.1rem;
       display: flex;
       align-self: center; }
     .body .main .contenedorImagenUno {
       grid-area: contenedorImagenUno;
       text-align: center;
       align-self: end;
-      box-shadow: 1px 1px 1px; }
+      box-shadow: 1px 1px 1px;
+      display: flex;
+      align-self: center; }
     .body .main .contenedorImagenDos {
       grid-area: contenedorImagenDos;
       text-align: center;
       align-self: end;
-      box-shadow: 1px 1px 1px; }
+      box-shadow: 1px 1px 1px;
+      display: flex;
+      align-self: center; }
     .body .main .contenedorImagenTres {
       grid-area: contenedorImagenTres;
       text-align: center;
       align-self: end;
-      box-shadow: 1px 1px 1px; }
+      box-shadow: 1px 1px 1px;
+      display: flex;
+      align-self: center; }
     .body .main .divMate {
       grid-area: divMate;
       display: flex;
@@ -572,6 +582,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    .bodyMates .header .navbar {
+      display: flex;
+      background-color: #a4c464;
+      justify-content: end;
+      color: white; }
+    .bodyMates .header .navbar-brand {
+      color: white; }
+    .bodyMates .header .navbar-expand-lg .navbar-nav .nav-link {
+      color: white; }
   .bodyMates .mainMates {
     background-color: #a4c464;
     grid-area: mainMates; }
@@ -593,20 +612,25 @@
         margin-top: 5rem;
         width: 300px;
         margin: 20px;
-        text-align: center; }
+        text-align: center;
+        justify-self: center; }
       .bodyMates .mainMates .mainMatesSection div.card.text {
         background-color: olivedrab;
         color: whitesmoke; }
       .bodyMates .mainMates .mainMatesSection .contenedorCardMatesDos {
         grid-area: contenedorCardMatesDos;
+        display: flex;
         flex-wrap: wrap;
         margin-top: 5rem;
         width: 300px;
         margin: 20px;
-        text-align: center; }
+        text-align: center;
+        justify-self: center; }
       .bodyMates .mainMates .mainMatesSection .contenedorCardMatesTres {
         grid-area: contenedorCardMatesTres;
         flex-wrap: wrap;
+        display: flex;
+        justify-self: center;
         margin-top: 5rem;
         width: 300px;
         margin: 20px;
@@ -616,19 +640,25 @@
         flex-wrap: wrap;
         width: 300px;
         margin: 20px;
-        text-align: center; }
+        text-align: center;
+        display: flex;
+        justify-self: center; }
       .bodyMates .mainMates .mainMatesSection .contenedorCardMatesCinco {
         grid-area: contenedorCardMatesCinco;
         flex-wrap: wrap;
         width: 300px;
         margin: 20px;
-        text-align: center; }
+        text-align: center;
+        display: flex;
+        justify-self: center; }
       .bodyMates .mainMates .mainMatesSection .contenedorCardMatesSeis {
         grid-area: contenedorCardMatesSeis;
         flex-wrap: wrap;
         width: 300px;
         margin: 20px;
-        text-align: center; }
+        text-align: center;
+        display: flex;
+        justify-self: center; }
   .bodyMates .footerM {
     grid-area: footerM;
     justify-content: space-between;
